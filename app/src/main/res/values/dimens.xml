@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_num">100dp</dimen>
+    <dimen name="btn_op">100dp</dimen>
+    <dimen name="width_full">400dp</dimen>
+    <dimen name="numberpad_width">300dp</dimen>
+    <dimen name="numberpad_height">400dp</dimen>
+    <dimen name="numberRow_height">100dp</dimen>
+    <dimen name="numBtnTextSize">18pt</dimen>
+    <dimen name="llBtnOps_width">100dp</dimen>
+    <dimen name="llBtnOps_height">400dp</dimen>
+    <dimen name="numberRow_width">300dp</dimen>
+</resources>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculator_header" />
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeader"
+        android:layout_alignParentStart="true"
+        android:gravity="right"
+        android:text="@string/defaultValue"
+        android:textAlignment="gravity"
+        android:textSize="14pt" />
+
+    <LinearLayout
+        android:id="@+id/llBtnPadAll"
+        android:layout_below="@id/tvDisplay"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llBtnNumbers"
+            android:orientation="vertical"
+            android:layout_width="@dimen/numberpad_width"
+            android:layout_height="@dimen/numberpad_height">
+
+            <LinearLayout
+                android:id="@+id/llBtnRow1"
+                android:layout_width="@dimen/numberRow_width"
+                android:layout_height="@dimen/numberRow_height"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_1"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick"/>
+                    <!--android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" -->
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/btn_2"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick"/>
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="right"
+                    android:text="@string/btn_3"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+
+            </LinearLayout><!-- llBtnRow1 -->
+            <LinearLayout
+                android:id="@+id/llBtnRow2"
+                android:layout_width="@dimen/numberRow_width"
+                android:layout_height="@dimen/numberRow_height"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_4"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_5"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_6"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+            </LinearLayout><!-- llBtnRow2 -->
+            <LinearLayout
+                android:id="@+id/llBtnRow3"
+                android:layout_width="@dimen/numberRow_width"
+                android:layout_height="@dimen/numberRow_height"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_7"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_8"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_9"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+            </LinearLayout><!-- llBtnRow3 -->
+            <LinearLayout
+                android:id="@+id/llBtnRow4"
+                android:layout_width="@dimen/numberRow_width"
+                android:layout_height="@dimen/numberRow_height"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPlusMinus"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_PlusMinus"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+                <Button
+                    android:id="@+id/btn0"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_0"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+                <Button
+                    android:id="@+id/btnPoint"
+                    android:layout_width="@dimen/btn_num"
+                    android:layout_height="@dimen/btn_num"
+                    android:layout_gravity="left"
+                    android:text="@string/btn_Point"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/numBtnTextSize"
+                    android:onClick="btnOnClick" />
+            </LinearLayout><!-- llBtnRow4 -->
+        </LinearLayout><!-- llBtnNumbers -->
+        <LinearLayout
+            android:id="@+id/llBtnOperators"
+            android:layout_width="@dimen/llBtnOps_width"
+            android:layout_height="@dimen/llBtnOps_height"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="@dimen/btn_op"
+                android:layout_height="@dimen/btn_op"
+                android:text="@string/btn_Plus"
+                android:textAlignment="center"
+                android:textSize="@dimen/numBtnTextSize"
+                android:onClick="btnOnClick" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="@dimen/btn_op"
+                android:layout_height="@dimen/btn_op"
+                android:text="@string/btn_Minus"
+                android:textAlignment="center"
+                android:textSize="@dimen/numBtnTextSize"
+                android:onClick="btnOnClick" />
+
+            <Button
+                android:id="@+id/btnMult"
+                android:layout_width="@dimen/btn_op"
+                android:layout_height="@dimen/btn_op"
+                android:text="@string/btn_Mult"
+                android:textAlignment="center"
+                android:textSize="@dimen/numBtnTextSize"
+                android:onClick="btnOnClick" />
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="@dimen/btn_op"
+                android:layout_height="@dimen/btn_op"
+                android:text="@string/btn_Div"
+                android:textAlignment="center"
+                android:textSize="@dimen/numBtnTextSize"
+                android:onClick="btnOnClick" />
+
+        </LinearLayout><!-- llBtnOperators -->
+
+    </LinearLayout><!-- llBtnPadAll -->
+    <LinearLayout
+        android:id="@+id/llBottomRow"
+        android:layout_below="@id/llBtnPadAll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- "\u232b" -->
+        <Button
+            android:id="@+id/btnBackspace"
+            android:layout_width="@dimen/btn_op"
+            android:layout_height="@dimen/btn_op"
+            android:text="\u232b"
+            android:textAlignment="center"
+            android:textSize="@dimen/numBtnTextSize"
+            android:onClick="btnOnClick" />
+
+        <Button
+            android:id="@+id/btnClearEntry"
+            android:layout_width="@dimen/btn_op"
+            android:layout_height="@dimen/btn_op"
+            android:text="@string/btn_ClearEntry"
+            android:textAlignment="center"
+            android:textSize="@dimen/numBtnTextSize"
+            android:onClick="btnOnClick" />
+
+        <Button
+            android:id="@+id/btnClearAll"
+            android:layout_width="@dimen/btn_op"
+            android:layout_height="@dimen/btn_op"
+            android:text="@string/btn_ClearAll"
+            android:textAlignment="center"
+            android:textSize="@dimen/numBtnTextSize"
+            android:onClick="btnOnClick" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_width="@dimen/btn_op"
+            android:layout_height="@dimen/btn_op"
+            android:text="@string/btn_Equals"
+            android:textAlignment="center"
+            android:textSize="@dimen/numBtnTextSize"
+            android:onClick="btnOnClick" />
+
+    </LinearLayout>
+</RelativeLayout>
