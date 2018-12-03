@@ -48,20 +48,27 @@ public class MainActivity extends AppCompatActivity {
         tmpzeroes = "";        for (int i = 0; i < numZeroes; i++){
             tmpzeroes = tmpzeroes + "0";
         }
-        tvDisp.setText(calc.getEntry() + tmpzeroes);
 
-
+        tmpResults = "";
         switch (key) {
             case "+":
             case "-":
             case "x":
             case "/":
                 tmpResults = key;
+                tvHead.setText(calc.getResult() + tmpResults);
+                break;
+            case "=":
+                tvHead.setText(calc.getResult() + tmpResults);
+                tvDisp.setText(calc.getResult() + tmpResults);
+                break;
+            case "C":
+                tvHead.setText("0.0");
+                tvDisp.setText("0.0");
                 break;
             default:
-                tmpResults = "";
-        }
-        tvHead.setText(calc.getResult() + tmpResults);
+                tvDisp.setText(calc.getEntry() + tmpzeroes);
+         }
 
 
 //        tmp = tvDisp.getText().toString();

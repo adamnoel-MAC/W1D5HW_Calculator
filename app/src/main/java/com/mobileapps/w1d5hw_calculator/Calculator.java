@@ -82,39 +82,63 @@ public class Calculator {
                 if (tmpDecPos == 0) DecPos++;
                 break;
             case "+":
-                currOp = ADD_OP;
-                if (Entry > 0.0){
-                    if (Result > 0.0) execute();
+                if (Entry != 0.0){
+                    if (currOp > 0) execute();
                     else {
                         setResult(getEntry());
                         setEntry(0.0);
                     }
                 }
+                currOp = ADD_OP;
                 break;
             case "-":
-                if (currOp > 0) execute();
-                else currOp = SUB_OP;
+                if (Entry != 0.0){
+                    if (currOp > 0) execute();
+                    else {
+                        setResult(getEntry());
+                        setEntry(0.0);
+                    }
+                }
+                currOp = SUB_OP;
                 break;
-            case "X":
-                if (currOp > 0) execute();
-                else currOp = MUL_OP;
+            case "x":
+                if (Entry != 0.0){
+                    if (currOp > 0) execute();
+                    else {
+                        setResult(getEntry());
+                        setEntry(0.0);
+                    }
+                }
+                currOp = MUL_OP;
                 break;
             case "/":
-                if (currOp > 0) execute();
-                else currOp = DIV_OP;
+                if (Entry != 0.0){
+                    if (currOp > 0) execute();
+                    else {
+                        setResult(getEntry());
+                        setEntry(0.0);
+                    }
+                }
+                currOp = DIV_OP;
                 break;
             case "=":
-                if (currOp > 0) execute();
+                if (currOp > 0) {
+                    execute();
+                }
                 currOp = 0;
-                setEntry(getResult());
+                //setEntry(getResult());
+                DecPos = 0;
+                zeroes = 0;
                 break;
             case "+/-":
                 setEntry(Entry * -1.0);
                 break;
         }
+        Log.d(TAG, "btnClick: Entry: " + Entry + "; Result: " + Result + "; CurrOp: " + currOp + "; DecPos: " + DecPos);
     }
 
     public void execute(){
+        Log.d(TAG, "execute: CurrOp: " + currOp);
         switch (this.currOp){
             case ADD_OP:
                 this.Result = this.Result + this.Entry;
